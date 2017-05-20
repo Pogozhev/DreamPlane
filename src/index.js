@@ -8,6 +8,7 @@ WebFont.load(WebFontConfig);
 
 // Load app
 import Modernizr from 'modernizr'
-if(NODE_ENV == 'development') require('./demo');
+// if(NODE_ENV == 'development') {}
+require('./demo');
 require('./polyfills');
 import './app'

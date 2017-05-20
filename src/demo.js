@@ -20,6 +20,7 @@
     });   
 
     // Render
+    app.classList.add('device');
     devicePreview.appendChild(devicePath);
     app.appendChild(devicePreview);
     document.body.appendChild(deviceToggle);

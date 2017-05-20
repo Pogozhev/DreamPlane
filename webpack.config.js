@@ -90,13 +90,27 @@ module.exports = {
 	}
 }
 
-
 if (isProd) {
-  module.exports.plugins.push(new webpack.DefinePlugin({
-      'NODE_ENV': `"production"`
-  }));
+	module.exports.plugins = (module.exports.plugins || []).concat([
+	    new webpack.optimize.UglifyJsPlugin({
+	      sourceMap: false,
+	      compress: {
+	        warnings: false
+	      },
+	      comments: false
+	    }),
+	    new webpack.LoaderOptionsPlugin({
+	      minimize: true,
+	      comments: false
+	    }),
+	    new webpack.DefinePlugin({
+	      'NODE_ENV': `"production"`
+	  	})
+	]);
 } else {
-  module.exports.plugins.push(new webpack.DefinePlugin({
-      'NODE_ENV': `"development"`
-  }));
+	module.exports.plugins = (module.exports.plugins || []).concat([
+	    new webpack.DefinePlugin({
+      		'NODE_ENV': `"development"`
+  		})
+	]);
 }
