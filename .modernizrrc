@@ -1,0 +1,19 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+  	"touchevents",
+    "css/backgroundblendmode",
+  	"css/backgroundsize",
+  	"css/fontface",
+  	"css/rgba",
+  	"css/transforms",
+  	"css/transitions",
+  	"svg",
+  	"svg/clippaths",
+	  "svg/filters",
+  	"svg/inline"
+  ]
+}

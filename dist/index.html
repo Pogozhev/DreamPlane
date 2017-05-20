@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S7 Friends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div id="app" class="device">
+        <div id="container">
+            <aside id="friends">
+                <div>
+                    <h2 class="component_title">Мои друзья</h2>
+                    <ul id="friendList"></ul>
+                </div>
+            </aside>
+            <nav id="nav">
+                <div>
+                    <h2 class="component_title">Навигация</h2>
+                    <ul id="navList"></ul>
+                </div>
+            </nav>
+            <main id="content">
+                <section id="chatbox">
+                    <ul id="chatList" class="chat-list"></ul>
+                    <input id="chatInput" type="text" class="chat-input" placeholder="Напишите сообщение..." maxlength="100" />
+                </section>
+                <section id="friendInfo">
+                    
+                </section>
+            </main>
+            <header class="clr">
+                <button id="toggle-friends"></button>
+                <button id="toggle-nav"></button>
+            </header>
+            <section id="startMenu">
+                <div class="login">
+                    <input type="text" tabindex="0" autofocus placeholder="Код авторизации" id="userNameInput" maxlength="25" />
+                    <div class="input-error">Неправильный формат</div>
+                    <a><button id="startButton">Войти</button></a>
+                </div>
+            </section>
+            <div id="logo">
+                <svg viewBox="0 0 100 100"><use xlink:href="#s7"></use></svg>    
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" id="svg_defs">
+        <defs>
+            <symbol id="s7">
+                <path class="cls-1" d="M100 50A50 50 0 1 1 50 0a50 50 0 0 1 50 50"/><path fill="currentColor" d="M46.37 23.9c-7.88 0-13 .45-16.68 1.82-6.23 2.42-10.52 7.5-10.52 14.16 0 5.55 2.6 9.58 10.07 14.2 8 4.84 9.58 6.44 9.58 9.36 0 3.2-3.13 6.83-11.18 6.83a48 48 0 0 1-9.74-1.05l-1.28-.33c-.72 1.92-2.35 6.48-2.85 8.14l1.28.38c2.43.78 8.2 1.38 12.34 1.38 13.75 0 22-8.3 22-17 0-5.35-2.44-9.4-10.64-14.53a41.3 41.3 0 0 1-7.5-5.44 4.83 4.83 0 0 1-1.14-3.36 4.9 4.9 0 0 1 .88-3 6.8 6.8 0 0 1 3.78-2.25c1.8-.6 5.17-.62 10.4-.62H50l3.48-8.7h-7.1zm36.8 0H58.7l-3.48 8.7h8.1c5.47 0 6.52-.12 7.9-.12-2 4.53-13.9 34.9-13.9 34.9H67.4s15.1-37.8 16.7-41.77c.43-.87.2-1.7-.94-1.7z"/>
+            </symbol>
+        </defs>
+    </svg>
+    <script src="js/app.js"></script>
+</body>
+</html>

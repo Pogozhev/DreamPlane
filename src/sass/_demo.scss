@@ -1,0 +1,50 @@
+$deviceWidth: 428px;
+$deviceHeight: 852px;
+$deviceViewportWidth: 375px;
+$deviceViewportHeight: 667px;
+$mockup: #e0e0e0;
+
+#toggle-device {
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	margin-top: 0.5em;
+	cursor: pointer;
+	border-bottom: 1px #000 dotted;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+#app {
+	&.device {
+		width: $deviceWidth;
+		margin: auto;
+		height: 100%;
+		overflow: hidden;
+
+		#container {
+			width: $deviceViewportWidth;
+			height: $deviceViewportHeight;
+			border: 3px #000 solid;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.device_mockup {
+			width: $deviceWidth;
+			height: $deviceHeight;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			fill: $mockup;
+			z-index: -1;
+		}
+	}
+
+	.device_mockup {
+		display: none;
+	}
+}
