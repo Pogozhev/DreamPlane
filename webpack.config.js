@@ -7,10 +7,10 @@ const isDev = NODE_ENV == 'development';
 const isProd = NODE_ENV == 'production';
 
 module.exports = { 
-	entry: ['webpack/hot/dev-server', 'webpack-hot-middleware/client', __dirname + '/src'],
+	entry: ['webpack/hot/dev-server', 'webpack-hot-middleware/client', __dirname + '/src/'],
 	output: {
 		path: __dirname + '/dist',
-		publicPath: 'http://localhost:3000/',
+		publicPath: '',
 		filename: 'js/app.js'
 	},
 	devtool: 'source-maps',

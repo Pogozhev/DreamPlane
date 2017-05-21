@@ -1,5 +1,7 @@
 'use strict';
 
+var mongoose = require('mongoose');
+
 // Server setup
 const express = require('express')
 const http = require('http')
@@ -23,6 +25,10 @@ app.use(webpackHotMiddleware(webpackCompiler))
 app.use(express.static(__dirname + '/dist'))
 app.use(bodyParser.urlencoded({extended:false}))
 server.listen(port)
+
+
+// DB
+require('./db');
 
 
 // Server app logic
